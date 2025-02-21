@@ -1,0 +1,21 @@
+{
+	"name": "demo-project",
+	"service": "demo-service",
+	"team": "localstack",
+	"repo": "giograno/service-docker",
+	"images": {
+		"node-service": {
+			"service_name": "node-service",
+			"image_type": "node",
+			"dockerfile_path": "./app/node-service/Dockerfile"
+		},
+		"python-service": {
+			"service_name": "python-service",
+			"dockerfile_path": "./app/python-service/Dockerfile",
+			"docker_opts": [
+			"--build-arg", "ARG_1=VALUE_1",
+			"--build-arg", "ARG_2=VALUE_2"
+			]
+		}
+	}
+}
